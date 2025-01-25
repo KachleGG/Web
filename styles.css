@@ -26,6 +26,28 @@ body {
     height: 80px;
 }
 
+.github-account {
+    width: 100%;
+    position: fixed; /* Sticks the div to the top */
+    top: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.github-account a {
+    width: 100%;
+    color: rgba(71, 64, 64, 0);
+    text-decoration: none;
+    text-align: center;
+}
+
+.github-account a:hover {
+    width: 100%;
+    color: rgb(149, 149, 149);
+    text-decoration: none;
+    text-align: center;
+}
+
 .data-list {
     padding-top: 60px;
 }

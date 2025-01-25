@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>KachleGG</title>
+    
 </head>
 <body>
     <div class="header-bar">
@@ -14,11 +15,35 @@
     </div>
     <div class="data-list">
         <h1 style="padding-left: 20px;">List</h1>
-            <ul>
+            <ul id="data-list">
                 <li><a href="https://kachlegg.github.io/Web/" class="data-list-a">My Web Page</a></li>
+                <li><a href="https://github.com/KachleGG/ArduDrone" class="data-list-a">ArduDrone</a></li>
+                <li><a href="https://github.com/KachleGG/ArduJet" class="data-list-a">ArduJet</a></li>
+                <li><a href="https://github.com/KachleGG/PiDrone" class="data-list-a">PiDrone</a></li>
             </ul>
     </div>
+    <script>
+        // Get the UL element
+        var list = document.getElementById('data-list');
 
+        // Convert the list items to an array
+        var itemsArray = Array.from(list.getElementsByTagName('li'));
+
+        // Sort the array alphabetically
+        itemsArray.sort(function(a, b) {
+            return a.textContent.localeCompare(b.textContent);
+        });
+
+        // Remove the existing list items
+        while (list.firstChild) {
+            list.removeChild(list.firstChild);
+        }
+
+        // Append the sorted list items back to the UL
+        itemsArray.forEach(function(item) {
+            list.appendChild(item);
+        });
+    </script>
     <footer>
         <p>&copy; 2025 Marek Kachlík. All rights reserved.</p>
     </footer>
